@@ -10,6 +10,7 @@ body{
     padding: 10px;
     height: 20%;
     border-bottom: black 3px solid;
+    background-color: rgb(57, 145, 57);
   }
 
   .below-header{
@@ -23,6 +24,7 @@ body{
       border-right: black 3px solid;
       width: 15rem;
       padding-left: 5px;
+      background-color: rgb(145, 175, 92);
     }
 
       h3{
