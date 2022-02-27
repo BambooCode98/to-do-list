@@ -4,7 +4,7 @@
 const content = document.querySelector('#content');
 
 
-//create project elements
+//create project elements and add classes
 const proPage = document.createElement('div');
 
 const projectHeader = document.createElement('h1');
@@ -13,6 +13,8 @@ const projectTitle = document.createElement('h4');
 const projectDesc = document.createElement('p');
 const projectDate = document.createElement('p');
 const projectPriority = document.createElement('p');
+
+proPage.classList.add('proPage');
 
 
 //add elemtns to page

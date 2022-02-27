@@ -49,3 +49,15 @@ body{
       overflow-y: scroll;
       overflow-x: hidden;
     }
+
+      .propage{
+        background-color: rgba(85, 85, 85, 0.651);
+      }
+
+      .notePage{
+        display: none;
+      }
+
+      .listPage{
+        display: none;
+      }
