@@ -54,10 +54,78 @@ body{
         background-color: rgba(85, 85, 85, 0.651);
       }
 
+        .probtn{
+          border: 2px black solid;
+          border-radius: 3px;
+        }
+
+        /* .projectModal{
+          display: none;
+          position: absolute;
+          height: 100%;
+          width: 98%;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          background-color: rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(2px);
+          padding: 1%;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .pmodal{
+          border: 5px solid black;
+          background-color: white;
+          width: 50%;
+          height: 50%;
+          margin-left: 
+        } */
+
       .notePage{
         display: none;
       }
 
       .listPage{
         display: none;
+      }
+
+      /* everything below is for the modals */
+      
+      .modal{
+        display: none;
+        z-index: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+        padding: 10% 20%;
+      }
+      
+      .modal-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fefefe;
+        width: 50%;
+        height: 50%;
+        border: 5px rgb(88, 86, 86) solid;
+        border-radius: 25px;
+        overflow: auto;
+      }
+      
+      form{
+        font-size: 25px;
+      }
+      
+      input{
+        padding: 5px;
+        margin: 15px;
+      }
+      
+      input:hover{
+        background-color: rgba(0, 0, 0, 0.1);
       }

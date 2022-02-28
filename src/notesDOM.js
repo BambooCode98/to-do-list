@@ -1,5 +1,7 @@
 'use strict';
 
+import './notesObjects.js';
+
 //get doc elements
 const content = document.querySelector('#content');
 

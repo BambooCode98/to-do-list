@@ -1,11 +1,13 @@
 'use strict';
 
+
 //get doc elements
 const content = document.querySelector('#content');
 
 
 //create project elements and add classes
 const proPage = document.createElement('div');
+const newbtn = document.createElement('button');
 
 const projectHeader = document.createElement('h1');
 const projectbox = document.createElement('div');
@@ -15,18 +17,20 @@ const projectDate = document.createElement('p');
 const projectPriority = document.createElement('p');
 
 proPage.classList.add('proPage');
+newbtn.classList.add('proBtn');
 
-
-//add elemtns to page
+//add elements to page
 
 content.append(proPage);
 proPage.append(projectHeader);
-proPage.append(projectbox);
-
+proPage.append(newbtn);
+// proPage.append(projectbox);
 
 //text
 
 projectHeader.innerHTML = "Project";
+newbtn.textContent = "+New Project";
+
 
 
 

@@ -1,5 +1,7 @@
 'use strict';
 
+import "./listObjects.js";
+
 let p = document.createElement('p')
 p.innerHTML = "hi"//get doc elements
 const content = document.querySelector('#content');

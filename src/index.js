@@ -8,7 +8,14 @@ import './projectDOM.js';
 import './notesDOM.js';
 import './listDOM.js';
 
+//get objects for each section
 
+import * as projectObs from './projectObjects.js';
+
+//get general elements
+const modal = document.querySelector('.modal');
+const proBtn = document.querySelector('.proBtn');
+const closebtn = docuemnt.querySelector('.close-modal');
 
 //tab selection from dom
 
@@ -22,6 +29,8 @@ const proPage = document.querySelector('.proPage');
 const notePage = document.querySelector('.notePage');
 const listPage = document.querySelector('.listPage');
 
+//form for each tab
+// const
 
 // display choices of tab
 
@@ -41,5 +50,15 @@ listtab.addEventListener('click', function() {
   proPage.style.display = "none";
   notePage.style.display = "none";
   listPage.style.display = "block";
+})
+
+//modal stuff for each tab
+
+proBtn.addEventListener('click', function() {
+  modal.style.display = "block";
+})
+
+closebtn.addEventListener('click', function() {
+  modal.style.display = "none";
 })
 
