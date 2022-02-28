@@ -48,6 +48,7 @@ body{
       width: 100%;
       overflow-y: scroll;
       overflow-x: hidden;
+      padding-left: 10px;
     }
 
       .propage{
@@ -56,31 +57,9 @@ body{
 
         .probtn{
           border: 2px black solid;
-          border-radius: 3px;
+          /* border-radius: 3px; */
+          background-color: rgb(216, 187, 108);
         }
-
-        /* .projectModal{
-          display: none;
-          position: absolute;
-          height: 100%;
-          width: 98%;
-          top: 0;
-          left: 0;
-          z-index: 1;
-          background-color: rgba(0, 0, 0, 0.5);
-          backdrop-filter: blur(2px);
-          padding: 1%;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .pmodal{
-          border: 5px solid black;
-          background-color: white;
-          width: 50%;
-          height: 50%;
-          margin-left: 
-        } */
 
       .notePage{
         display: none;
@@ -102,7 +81,7 @@ body{
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(2px);
-        padding: 10% 20%;
+        padding: 5% 15%;
       }
       
       .modal-content{
@@ -110,11 +89,12 @@ body{
         justify-content: center;
         align-items: center;
         background-color: #fefefe;
-        width: 50%;
-        height: 50%;
+        width: 70%;
+        height: 70%;
         border: 5px rgb(88, 86, 86) solid;
         border-radius: 25px;
-        overflow: auto;
+        /* overflow-y: scroll;
+        overflow-x: none; */
       }
       
       form{
@@ -128,4 +108,28 @@ body{
       
       input:hover{
         background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .close-modal{
+        position: relative;
+        left: 50%;
+        top: -35%;
+        font-size: 80px;
+      }
+      
+      .close-modal:hover{
+        color: rgb(117, 111, 111);
+        cursor: pointer;
+      }
+
+      #buttonModal{
+        border: 3px rgb(52, 52, 116) solid;
+        border-radius: 5px;
+        background-color: rgb(172, 172, 206);
+      }
+      
+      #buttonModal:hover{
+        background-color: rgb(103, 199, 140);
+        cursor: pointer;
+        transform: translate3d(180, 90, 90);
       }

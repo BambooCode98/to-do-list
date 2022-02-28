@@ -9,6 +9,7 @@ const content = document.querySelector('#content');
 
 //create project elements and add classes
 const listPage = document.createElement('div');
+const btn3 = document.createElement('button');
 
 const listHeader = document.createElement('h1');
 const listbox = document.createElement('div');
@@ -26,10 +27,12 @@ listPage.classList.add('listPage');
 
 content.append(listPage);
 listPage.append(listHeader);
+listPage.append(btn3);
 
 //text
 
 listHeader.innerHTML = "Lists";
+btn3.textContent = "+New";
 
 
 

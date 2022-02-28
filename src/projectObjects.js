@@ -1,6 +1,6 @@
 //project creation
 
-export function createProject(title, description, date) {
+function createProject(title, description, date) {
   return {
     title, 
     description,

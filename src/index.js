@@ -15,7 +15,11 @@ import * as projectObs from './projectObjects.js';
 //get general elements
 const modal = document.querySelector('.modal');
 const proBtn = document.querySelector('.proBtn');
-const closebtn = docuemnt.querySelector('.close-modal');
+const btn2 = document.querySelector('.btn2');
+const btn3 = document.querySelector('.btn3');
+const closebtn = document.querySelector('.close-modal');
+const form = document.forms["addbook"];
+const choices = form.querySelector('#choices');
 
 //tab selection from dom
 
@@ -28,9 +32,6 @@ const listtab = document.querySelector('#listtab');
 const proPage = document.querySelector('.proPage');
 const notePage = document.querySelector('.notePage');
 const listPage = document.querySelector('.listPage');
-
-//form for each tab
-// const
 
 // display choices of tab
 
@@ -56,6 +57,17 @@ listtab.addEventListener('click', function() {
 
 proBtn.addEventListener('click', function() {
   modal.style.display = "block";
+  choices.innerHTML = "Project Title:";
+})
+
+btn2.addEventListener('click', function() {
+  modal.style.display = "block";
+  choices.innerHTML = "Note Title:";
+})
+
+btn3.addEventListener('click', function() {
+  modal.style.display = "block";
+  choices.innerHTML = "List Title:";
 })
 
 closebtn.addEventListener('click', function() {
