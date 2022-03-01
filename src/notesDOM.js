@@ -30,7 +30,7 @@ notePage.append(btn2);
 //text
 
 noteHeader.innerHTML = "Notes";
-btn2.textContent = "+Notes";
+btn2.textContent = "+New Note";
 
 
 

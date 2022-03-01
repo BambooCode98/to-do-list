@@ -10,7 +10,8 @@ import './listDOM.js';
 
 //get objects for each section
 
-import * as projectObs from './projectObjects.js';
+import './projectObjects.js';
+// import * as projectObs from './projectObjects.js';
 
 //get general elements
 const modal = document.querySelector('.modal');
@@ -20,6 +21,9 @@ const btn3 = document.querySelector('.btn3');
 const closebtn = document.querySelector('.close-modal');
 const form = document.forms["addbook"];
 const choices = form.querySelector('#choices');
+
+//extra elements for more functionality
+// const closeSpace = document.querySelector('.modal');
 
 //tab selection from dom
 
@@ -36,7 +40,7 @@ const listPage = document.querySelector('.listPage');
 // display choices of tab
 
 protab.addEventListener('click', function() {
-  proPage.style.display = "block";
+  proPage.style.display = "grid";
   notePage.style.display = "none";
   listPage.style.display = "none";
 })
@@ -57,20 +61,22 @@ listtab.addEventListener('click', function() {
 
 proBtn.addEventListener('click', function() {
   modal.style.display = "block";
-  choices.innerHTML = "Project Title:";
+  choices.textContent = "Project Title:";
 })
 
 btn2.addEventListener('click', function() {
   modal.style.display = "block";
-  choices.innerHTML = "Note Title:";
+  choices.textContent = "Note Title:";
 })
 
 btn3.addEventListener('click', function() {
   modal.style.display = "block";
-  choices.innerHTML = "List Title:";
+  choices.textContent = "List Title:";
 })
 
 closebtn.addEventListener('click', function() {
   modal.style.display = "none";
 })
+
+//object creation for each tab
 

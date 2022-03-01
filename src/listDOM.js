@@ -19,7 +19,7 @@ const listDate = document.createElement('p');
 const listPriority = document.createElement('p');
 
 listPage.classList.add('listPage');
-
+btn3.classList.add('btn3');
 
 
 
@@ -32,7 +32,7 @@ listPage.append(btn3);
 //text
 
 listHeader.innerHTML = "Lists";
-btn3.textContent = "+New";
+btn3.textContent = "+New List";
 
 
 
