@@ -22,7 +22,6 @@ export function createProject(title, description, date) {
 //get elements
 const form = document.forms["addbook"];
 const proPage = document.querySelector('.proPage');
-console.log(proPage);
 
 //create project
 
@@ -41,8 +40,10 @@ form.addEventListener("submit", function(e) {
   const ptitle = document.createElement('h4');
   const pdesc = document.createElement('p');
   const pdate = document.createElement('p');
+  const deleteBtn = document.createElement('button');
 
-  projectbox.classList.add('pbox')
+
+  projectbox.classList.add('pbox');
 
   proPage.append(projectbox);
   projectbox.append(ptitle);
@@ -51,7 +52,14 @@ form.addEventListener("submit", function(e) {
   pdesc.textContent = 'Description: ' + project.description;
   projectbox.append(pdate);
   pdate.textContent = 'Date: ' + project.date;
+  projectbox.append(deleteBtn);
+  deleteBtn.textContent = 'Delete';
 
+  deleteBtn.addEventListener('click', function() {
+    projectbox.remove(this);
+    project;
+    console.log(project);
+  })
 
 })
 

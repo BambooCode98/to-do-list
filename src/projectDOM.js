@@ -19,7 +19,7 @@ const projectHeader = document.createElement('h1');
 
 proPage.classList.add('proPage');
 newbtn.classList.add('proBtn');
-projectHeader.classList.add()
+projectHeader.classList.add('.pheader');
 // projectbox.classList.add('pbox');
 // projectTitle.classList.add('ptitle');
 // projectDesc.classList.add('pdesc');
