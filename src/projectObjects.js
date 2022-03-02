@@ -1,5 +1,14 @@
 'use strict';
 
+import { projectElements } from "./projectDOM";
+
+//get elements
+
+const form = document.forms["addbook"];
+const proPage = document.querySelector('.proPage');
+
+export let projectList = [];
+
 //project creation
 
 export function createProject(title, description, date) {
@@ -10,57 +19,46 @@ export function createProject(title, description, date) {
   };
 }
 
-// class example - working
-// class Project {
-//   constructor(title, description, date) {
-//     this.title = title; 
-//     this.description = description; 
-//     this.date = date;
-//   }
-// }
-
-//get elements
-const form = document.forms["addbook"];
-const proPage = document.querySelector('.proPage');
-
-//create project
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
+function makeProject() {
   const title = form.querySelector('input[id="title"]').value;
   const description = form.querySelector('textarea[id="description"]').value;
   const date = form.querySelector('input[id="date"]').value;
 
   const project = createProject(title, description, date);
-  // const project = new Project(title, description, date);
-  console.log(project);
+  projectList.push(project);
 
-  const projectbox = document.createElement('div');
-  const ptitle = document.createElement('h4');
-  const pdesc = document.createElement('p');
-  const pdate = document.createElement('p');
-  const deleteBtn = document.createElement('button');
+  projectElements(project);
+
+}
+
+function saveData() {
+  sessionStorage.setItem('projects', JSON.stringify(projectList));
+}
 
 
-  projectbox.classList.add('pbox');
+//create projects
 
-  proPage.append(projectbox);
-  projectbox.append(ptitle);
-  ptitle.textContent = 'Project: ' + project.title;
-  projectbox.append(pdesc);
-  pdesc.textContent = 'Description: ' + project.description;
-  projectbox.append(pdate);
-  pdate.textContent = 'Date: ' + project.date;
-  projectbox.append(deleteBtn);
-  deleteBtn.textContent = 'Delete';
-
-  deleteBtn.addEventListener('click', function() {
-    projectbox.remove(this);
-    project;
-    console.log(project);
-  })
-
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  
+  makeProject();
+  saveData();
+  console.log(projectList);
 })
+
+
+export function getData() {
+  let data = JSON.parse(sessionStorage.getItem('projects'));
+  // console.log(data);
+  return data;
+}
+
+// getData();
+
+// console.log(getData());
+
+console.log(projectList);
+
+
 
 

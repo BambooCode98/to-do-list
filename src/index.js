@@ -1,16 +1,17 @@
 'use strict';
 
-
 import './style.css';
 
 //generate the individual sections
+
 import './projectDOM.js';
 import './notesDOM.js';
 import './listDOM.js';
 
 //get objects for each section
 
-import './projectObjects.js';
+import { getData } from './projectObjects.js';
+
 // import * as projectObs from './projectObjects.js';
 
 //get general elements
@@ -79,4 +80,6 @@ closebtn.addEventListener('click', function() {
 })
 
 //object creation for each tab
-
+let data = getData();
+console.log(getData());
+proPage.append(data);
