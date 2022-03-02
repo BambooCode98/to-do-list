@@ -3,8 +3,8 @@
 import { projectElements } from "./projectDOM";
 
 //get elements
-
-const form = document.forms["addbook"];
+const form = document.forms["add"];
+console.log(form);
 // const proPage = document.querySelector('.proPage');
 
 export let projectList = [];

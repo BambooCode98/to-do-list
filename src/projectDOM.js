@@ -11,7 +11,6 @@ const content = document.querySelector('#content');
 const proPage = document.createElement('div');
 const projectHeader = document.createElement('h1');
 const newbtn = document.createElement('button');
-// const deleteBtn = document.createElement('button');
 const modal = document.querySelector('.modal');
 
 proPage.classList.add('proPage');

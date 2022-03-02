@@ -4,7 +4,7 @@ import { noteElements } from "./notesDOM";
 
 //get elements
 
-const form = document.forms["addbook"];
+const form = document.forms["add"];
 
 export let noteList = [];
 
@@ -43,13 +43,11 @@ form.addEventListener("submit", function(e) {
   e.preventDefault();
   
   makeNote();
-  // console.log(projectList);
 })
 
 
 export function getNoteData() {
   let ndata = JSON.parse(sessionStorage.getItem('notes'));
-  // console.log(data);
   return ndata;
 }
 

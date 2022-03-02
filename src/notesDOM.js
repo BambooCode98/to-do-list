@@ -14,19 +14,23 @@ const btn2 = document.createElement('button');
 const modal = document.querySelector('.modal');
 const noteHeader = document.createElement('h1');
 
+notePage.classList.add('notePage');
+noteHeader.classList.add('nheader')
+btn2.classList.add('btn2');
+
 export function noteElements(note) {
   const notebox = document.createElement('div');
   const ntitle = document.createElement('h4');
   const ndesc = document.createElement('p');
   const ndate = document.createElement('p');
   const deleteBtn = document.createElement('button');
-
+  const nPage = document.querySelector('.notePage');
 
   notebox.classList.add('nbox');
 
   modal.style.display = 'none';
 
-  notePage.append(notebox);
+  nPage.append(notebox);
   notebox.append(ntitle);
   ntitle.textContent = 'Title: ' + note.title;
   notebox.append(ndesc);
@@ -43,10 +47,6 @@ export function noteElements(note) {
   })
 }
 
-
-notePage.classList.add('notePage');
-noteHeader.classList.add('nheader')
-btn2.classList.add('btn2');
 
 //add elemtns to page
 

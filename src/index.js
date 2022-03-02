@@ -10,12 +10,9 @@ import './listDOM.js';
 
 //get objects for each section
 
-// import { getData } from './projectObjects.js';
 import { storedData } from './projectDOM.js';
 import { storedNoteData } from './notesDOM.js';
 import { storedListData } from './listDOM.js';
-
-// import * as projectObs from './projectObjects.js';
 
 //get general elements
 const modal = document.querySelector('.modal');
@@ -23,11 +20,8 @@ const proBtn = document.querySelector('.proBtn');
 const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
 const closebtn = document.querySelector('.close-modal');
-const form = document.forms["addbook"];
+const form = document.forms["add"];
 const choices = form.querySelector('#choices');
-
-//extra elements for more functionality
-// const closeSpace = document.querySelector('.modal');
 
 //tab selection from dom
 
@@ -61,7 +55,7 @@ listtab.addEventListener('click', function() {
   listPage.style.display = "block";
 })
 
-//modal stuff for each tab
+//modal for each tab
 
 proBtn.addEventListener('click', function() {
   modal.style.display = "block";

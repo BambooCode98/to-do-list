@@ -4,7 +4,7 @@ import { listElements } from "./listDOM";
 
 //get elements
 
-const form = document.forms["addbook"];
+const form = document.forms["add"];
 
 export let theList = [];
 
