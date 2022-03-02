@@ -1,3 +1,7 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -28,7 +32,6 @@ body{
     }
 
       h3{
-        /* border: 2px solid red; */
         font-size: 25px;
         border-bottom: 2px solid black;
       }
@@ -44,33 +47,45 @@ body{
       } */
 
     .content-body{
-      /* border: 2px red solid; */
-      /* height: 100%; */
       width: 100%;
       overflow-y: scroll;
       overflow-x: hidden;
-      /* padding-left: 10px; */
       padding: 10px;
     }
 
-      .probtn { grid-area: button; }
-      .probtn { grid-area: header; }
-
       .proPage{
-        display: grid;
-        grid-template-columns: max-content;
-        grid-template-rows: auto;
-        gap: 2%;
+        display: flex;
+        flex-direction: column;
       }
 
+        .pheader{
+          border-bottom: black 4px solid;
+        }
+
         .proBtn{
+          position: relative;
+          top: -83px;
+          left: 135px;
           border: 2px black solid;
           border-radius: 3px;
           background-color: rgb(216, 187, 108);
+          width: 65px;
+          height: 55px;
         }
 
-      .pbox{
-        border: 2px red solid;
+        .proBtn:hover{
+          cursor: pointer;
+          background-color: rgb(112, 97, 55);
+        }
+
+      .pbox, .nbox{
+        border: 2px rgb(103, 130, 170) solid;
+        border-radius: 5px;
+        background-color: rgb(76, 240, 232);
+        padding: 4px;
+        height: 80%;
+        width: 80%;
+        margin: 5px;
       }
 
       .notePage{
@@ -119,14 +134,22 @@ body{
         font-size: 25px;
       }
       
+      #choices, #description, #date{
+        margin: 5px;
+      }
+
+      #choices{
+        margin-top: 25px;
+        padding-top: 10%;
+      }
+      
       input{
         padding: 5px;
-        margin: 15px;
+        margin: 5px;
       }
 
       textarea{
         padding: 5px;
-        margin: 15px;
       }
       
       input:hover{
@@ -139,9 +162,9 @@ body{
 
       .close-modal{
         position: relative;
-        left: 50%;
-        top: -35%;
-        font-size: 80px;
+        left: 250px;
+        top: -200px;
+        font-size: 50px;
       }
       
       .close-modal:hover{
@@ -150,9 +173,15 @@ body{
       }
 
       #buttonModal{
+        position: relative;
+        top: 90%;
+        left: 60%;
         border: 3px rgb(52, 52, 116) solid;
         border-radius: 5px;
         background-color: rgb(172, 172, 206);
+        margin-bottom: 10px;
+        width: 35%;
+        height: 15%;
       }
       
       #buttonModal:hover{

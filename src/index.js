@@ -10,7 +10,9 @@ import './listDOM.js';
 
 //get objects for each section
 
-import { getData } from './projectObjects.js';
+// import { getData } from './projectObjects.js';
+import { storedData } from './projectDOM.js';
+import { storedNoteData } from './notesDOM.js';
 
 // import * as projectObs from './projectObjects.js';
 
@@ -41,7 +43,7 @@ const listPage = document.querySelector('.listPage');
 // display choices of tab
 
 protab.addEventListener('click', function() {
-  proPage.style.display = "grid";
+  proPage.style.display = "flex";
   notePage.style.display = "none";
   listPage.style.display = "none";
 })
@@ -80,6 +82,7 @@ closebtn.addEventListener('click', function() {
 })
 
 //object creation for each tab
-let data = getData();
-console.log(getData());
-proPage.append(data);
+
+
+storedData();
+storedNoteData();

@@ -1,3 +1,15 @@
+'se strict';
+
+import { noteElements } from "./notesDOM";
+
+//get elements
+
+const form = document.forms["addbook"];
+
+export let noteList = [];
+
+//project creation
+
 export function createNote(title, description, date) {
   return {
     title, 
@@ -5,3 +17,45 @@ export function createNote(title, description, date) {
     date,
   };
 }
+
+function saveNoteData() {
+  sessionStorage.setItem('notes', JSON.stringify(noteList));
+}
+
+function makeNote() {
+  const title = form.querySelector('input[id="title"]').value;
+  const description = form.querySelector('textarea[id="description"]').value;
+  const date = form.querySelector('input[id="date"]').value;
+
+  const note = createNote(title, description, date);
+  noteList.push(note);
+
+  noteElements(note);
+  saveNoteData();
+
+}
+
+
+
+//create projects
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  
+  makeNote();
+  // console.log(projectList);
+})
+
+
+export function getNoteData() {
+  let ndata = JSON.parse(sessionStorage.getItem('notes'));
+  // console.log(data);
+  return ndata;
+}
+
+
+
+
+
+
+

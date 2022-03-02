@@ -5,7 +5,7 @@ import { projectElements } from "./projectDOM";
 //get elements
 
 const form = document.forms["addbook"];
-const proPage = document.querySelector('.proPage');
+// const proPage = document.querySelector('.proPage');
 
 export let projectList = [];
 
@@ -19,6 +19,10 @@ export function createProject(title, description, date) {
   };
 }
 
+function saveData() {
+  sessionStorage.setItem('projects', JSON.stringify(projectList));
+}
+
 function makeProject() {
   const title = form.querySelector('input[id="title"]').value;
   const description = form.querySelector('textarea[id="description"]').value;
@@ -28,12 +32,10 @@ function makeProject() {
   projectList.push(project);
 
   projectElements(project);
+  saveData();
 
 }
 
-function saveData() {
-  sessionStorage.setItem('projects', JSON.stringify(projectList));
-}
 
 
 //create projects
@@ -42,8 +44,7 @@ form.addEventListener("submit", function(e) {
   e.preventDefault();
   
   makeProject();
-  saveData();
-  console.log(projectList);
+  // console.log(projectList);
 })
 
 
@@ -57,7 +58,7 @@ export function getData() {
 
 // console.log(getData());
 
-console.log(projectList);
+// console.log(projectList);
 
 
 
