@@ -1,4 +1,4 @@
-'se strict';
+'use strict';
 
 import { noteElements } from "./notesDOM";
 

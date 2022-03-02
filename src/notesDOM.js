@@ -12,7 +12,6 @@ const content = document.querySelector('#content');
 const notePage = document.createElement('div');
 const btn2 = document.createElement('button');
 const modal = document.querySelector('.modal');
-
 const noteHeader = document.createElement('h1');
 
 export function noteElements(note) {
@@ -46,6 +45,7 @@ export function noteElements(note) {
 
 
 notePage.classList.add('notePage');
+noteHeader.classList.add('nheader')
 btn2.classList.add('btn2');
 
 //add elemtns to page
@@ -80,9 +80,9 @@ export function storedNoteData() {
   
     notePage.append(ndatabox);
     ndatabox.append(ndataTitle);
-    ndataTitle.textContent = 'Project: ' + ndata[i].title;
+    ndataTitle.textContent = 'Title: ' + ndata[i].title;
     ndatabox.append(ndataDesc);
-    ndataDesc.textContent = 'Description: ' + ndata[i].description;
+    ndataDesc.textContent = 'Note Description: ' + ndata[i].description;
     ndatabox.append(ndataDate);
     ndataDate.textContent = 'Date: ' + ndata[i].date;
     ndatabox.append(ndeleteBtn);

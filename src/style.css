@@ -58,11 +58,11 @@ body{
         flex-direction: column;
       }
 
-        .pheader{
+        .pheader, .nheader, .lheader{
           border-bottom: black 4px solid;
         }
 
-        .proBtn{
+        .proBtn, .btn2, .btn3{
           position: relative;
           top: -83px;
           left: 135px;
@@ -78,7 +78,7 @@ body{
           background-color: rgb(112, 97, 55);
         }
 
-      .pbox, .nbox{
+      .pbox, .nbox, .lbox{
         border: 2px rgb(103, 130, 170) solid;
         border-radius: 5px;
         background-color: rgb(76, 240, 232);
@@ -92,8 +92,16 @@ body{
         display: none;
       }
 
+      .nbox{
+        background-color: #da6767de;
+      }
+
       .listPage{
         display: none;
+      }
+
+      .lbox{
+        background-color: #d4d250e0;
       }
 
       /* everything below is for the modals */

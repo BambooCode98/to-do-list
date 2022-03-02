@@ -13,6 +13,7 @@ import './listDOM.js';
 // import { getData } from './projectObjects.js';
 import { storedData } from './projectDOM.js';
 import { storedNoteData } from './notesDOM.js';
+import { storedListData } from './listDOM.js';
 
 // import * as projectObs from './projectObjects.js';
 
@@ -86,3 +87,4 @@ closebtn.addEventListener('click', function() {
 
 storedData();
 storedNoteData();
+storedListData();
