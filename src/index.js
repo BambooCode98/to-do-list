@@ -3,7 +3,7 @@
 import './style.css';
 
 //generate the individual sections
-
+import './forms.js';
 import './projectDOM.js';
 import './notesDOM.js';
 import './listDOM.js';
@@ -20,8 +20,12 @@ const proBtn = document.querySelector('.proBtn');
 const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
 const closebtn = document.querySelector('.close-modal');
-const form = document.forms["add"];
-const choices = form.querySelector('#choices');
+const pform = document.forms["project"];
+const pchoice = pform.querySelector('#choices');
+const nform = document.forms["note"];
+const nchoice = nform.querySelector('#choices');
+const lform = document.forms["list"];
+const lchoice = lform.querySelector('#choices');
 
 //tab selection from dom
 
@@ -59,17 +63,17 @@ listtab.addEventListener('click', function() {
 
 proBtn.addEventListener('click', function() {
   modal.style.display = "block";
-  choices.textContent = "Project Title:";
+  pchoice.textContent = "Project Title:";
 })
 
 btn2.addEventListener('click', function() {
   modal.style.display = "block";
-  choices.textContent = "Note Title:";
+  nchoice.textContent = "Note Title:";
 })
 
 btn3.addEventListener('click', function() {
   modal.style.display = "block";
-  choices.textContent = "List Title:";
+  lchoice.textContent = "List Title:";
 })
 
 closebtn.addEventListener('click', function() {

@@ -1,9 +1,14 @@
 'use strict';
 
 import { projectElements } from "./projectDOM";
+import { formCreater } from './forms.js';
+
+formCreater("project");
 
 //get elements
-const form = document.forms["add"];
+
+const form = document.forms["project"];
+// const form = document.querySelector('#project');
 console.log(form);
 // const proPage = document.querySelector('.proPage');
 

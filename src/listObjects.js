@@ -1,10 +1,13 @@
 'use strict';
 
 import { listElements } from "./listDOM";
+import { formCreater } from './forms.js';
+
+formCreater("list");
 
 //get elements
 
-const form = document.forms["add"];
+const form = document.forms["list"];
 
 export let theList = [];
 
@@ -24,7 +27,7 @@ function saveListData() {
 
 function makeList() {
   const title = form.querySelector('input[id="title"]').value;
-  const description = form.querySelector('textarea[id="description"]').value;
+  const description = form.querySelector('textarea[id="descriptionBox"]').value;
   const date = form.querySelector('input[id="date"]').value;
 
   const list = createList(title, description, date);

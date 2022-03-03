@@ -1,6 +1,7 @@
 'use strict';
 
 import { projectList, getData } from './projectObjects.js';
+import { formCreater } from './forms.js';
 
 //get doc elements
 const content = document.querySelector('#content');

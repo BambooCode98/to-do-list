@@ -1,10 +1,13 @@
 'use strict';
 
 import { noteElements } from "./notesDOM";
+import { formCreater } from './forms.js';
 
+
+formCreater("note")
 //get elements
 
-const form = document.forms["add"];
+const form = document.forms["note"];
 
 export let noteList = [];
 
