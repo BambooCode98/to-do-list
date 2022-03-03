@@ -15,18 +15,19 @@ import { storedNoteData } from './notesDOM.js';
 import { storedListData } from './listDOM.js';
 
 //get general elements
-const modal = document.querySelector('.modal');
+const pmodal = document.querySelector('.project');
+const nmodal = document.querySelector('.note');
+const lmodal = document.querySelector('.list');
 const proBtn = document.querySelector('.proBtn');
 const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
-const closebtn = document.querySelector('.close-modal');
+const closebtns = document.querySelector('.close-modal');
 const pform = document.forms["project"];
 const pchoice = pform.querySelector('#choices');
 const nform = document.forms["note"];
 const nchoice = nform.querySelector('#choices');
 const lform = document.forms["list"];
 const lchoice = lform.querySelector('#choices');
-
 //tab selection from dom
 
 const protab = document.querySelector('#protab');
@@ -62,22 +63,24 @@ listtab.addEventListener('click', function() {
 //modal for each tab
 
 proBtn.addEventListener('click', function() {
-  modal.style.display = "block";
+  pmodal.style.display = "block";
   pchoice.textContent = "Project Title:";
 })
 
 btn2.addEventListener('click', function() {
-  modal.style.display = "block";
+  nmodal.style.display = "block";
   nchoice.textContent = "Note Title:";
 })
 
 btn3.addEventListener('click', function() {
-  modal.style.display = "block";
+  lmodal.style.display = "block";
   lchoice.textContent = "List Title:";
 })
 
-closebtn.addEventListener('click', function() {
-  modal.style.display = "none";
+closebtns.addEventListener('click', function() {
+  pmodal.style.display = "none";
+  nmodal.style.display = "none";
+  lmodal.style.display = "none";
 })
 
 //object creation for each tab

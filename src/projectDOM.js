@@ -1,10 +1,10 @@
 'use strict';
 
 import { projectList, getData } from './projectObjects.js';
-import { formCreater } from './forms.js';
 
 //get doc elements
 const content = document.querySelector('#content');
+const pmodal = document.querySelector('.project');
 
 
 //create project elements and add classes
@@ -27,8 +27,12 @@ export function projectElements(project) {
 
 
   projectbox.classList.add('pbox');
+  ptitle.classList.add('title');
+  pdesc.classList.add('desc');
+  pdate.classList.add('date');
+  deleteBtn.classList.add('delete');
 
-  modal.style.display = 'none';
+  pmodal.style.display = 'none';
 
   proPage.append(projectbox);
   projectbox.append(ptitle);
@@ -77,7 +81,11 @@ export function storedData() {
   
     databox.classList.add('pbox');
   
-    modal.style.display = 'none';
+    pmodal.style.display = 'none';
+    dataTitle.classList.add('title');
+    dataDesc.classList.add('desc');
+    dataDate.classList.add('date');
+    deleteBtn.classList.add('delete');
   
     proPage.append(databox);
     databox.append(dataTitle);

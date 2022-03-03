@@ -1,18 +1,18 @@
 'use strict';
 
 import { noteList, getNoteData } from './notesObjects.js';
-import { formCreater } from './forms.js';
 
 
 
 //get doc elements
 const content = document.querySelector('#content');
+const nmodal = document.querySelector('.note');
 
 
 //create project elements and add classes
 const notePage = document.createElement('div');
 const btn2 = document.createElement('button');
-const modal = document.querySelector('.modal');
+// const modal = document.querySelector('.modal');
 const noteHeader = document.createElement('h1');
 
 notePage.classList.add('notePage');
@@ -29,7 +29,11 @@ export function noteElements(note) {
 
   notebox.classList.add('nbox');
 
-  modal.style.display = 'none';
+  nmodal.style.display = 'none';
+  ntitle.classList.add('title');
+  ndesc.classList.add('desc');
+  ndate.classList.add('date');
+  deleteBtn.classList.add('delete');
 
   nPage.append(notebox);
   notebox.append(ntitle);
@@ -76,8 +80,12 @@ export function storedNoteData() {
   
   
     ndatabox.classList.add('nbox');
+    ndataTitle.classList.add('title');
+    ndataDesc.classList.add('desc');
+    ndataDate.classList.add('date');
+    ndeleteBtn.classList.add('delete');
   
-    modal.style.display = 'none';
+    nmodal.style.display = 'none';
   
     notePage.append(ndatabox);
     ndatabox.append(ndataTitle);

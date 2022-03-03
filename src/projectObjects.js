@@ -30,7 +30,7 @@ function saveData() {
 
 function makeProject() {
   const title = form.querySelector('input[id="title"]').value;
-  const description = form.querySelector('textarea[id="description"]').value;
+  const description = form.querySelector('textarea[id="descriptionBox"]').value;
   const date = form.querySelector('input[id="date"]').value;
 
   const project = createProject(title, description, date);

@@ -106,7 +106,7 @@ body{
 
       /* everything below is for the modals */
       
-      .modal{
+      .project, .note, .list{
         display: none;
         z-index: 1;
         position: fixed;

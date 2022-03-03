@@ -27,7 +27,7 @@ function saveNoteData() {
 
 function makeNote() {
   const title = form.querySelector('input[id="title"]').value;
-  const description = form.querySelector('textarea[id="description"]').value;
+  const description = form.querySelector('textarea[id="descriptionBox"]').value;
   const date = form.querySelector('input[id="date"]').value;
 
   const note = createNote(title, description, date);

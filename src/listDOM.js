@@ -7,6 +7,7 @@ import { formCreater } from './forms.js';
 //get doc elements
 
 const content = document.querySelector('#content');
+const lmodal = document.querySelector('.list');
 
 
 //create project elements and add classes
@@ -26,7 +27,11 @@ export function listElements(list) {
 
   listbox.classList.add('lbox');
 
-  modal.style.display = 'none';
+  lmodal.style.display = 'none';
+  ltitle.classList.add('title');
+  ldesc.classList.add('desc');
+  ldate.classList.add('date');
+  deleteBtn.classList.add('delete');
 
   listPage.append(listbox);
   listbox.append(ltitle);
@@ -79,7 +84,11 @@ export function storedListData() {
   
     ldatabox.classList.add('lbox');
   
-    modal.style.display = 'none';
+    lmodal.style.display = 'none';
+    ldataTitle.classList.add('title');
+    ldataDesc.classList.add('desc');
+    ldataDate.classList.add('date');
+    ldeleteBtn.classList.add('delete');
   
     listPage.append(ldatabox);
     ldatabox.append(ldataTitle);

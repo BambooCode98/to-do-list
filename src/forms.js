@@ -3,10 +3,13 @@
 //form templates
 
 // let id = "";
-const modalArea = document.querySelector('.modal-content');
+const content = document.querySelector('.content-body');
 
 export function formCreater(id) {
 
+  const modal = document.createElement("div");
+  const modalContent = document.createElement("div");
+  const closebtn = document.createElement('span');
   const form = document.createElement('form');
   const input1 = document.createElement('input');
   const textArea = document.createElement('textarea');
@@ -19,18 +22,25 @@ export function formCreater(id) {
   const lb3 = document.createElement('br');
   const button = document.createElement('button');
 
-
+  modal.classList.add(id);
+  modalContent.classList.add('modal-content');
+  closebtn.classList.add('close-modal');
   form.setAttribute("id", id);
   input1.setAttribute("id", "title");
   textArea.setAttribute("id", "descriptionBox");
   textArea.setAttribute("form", id);
+  textArea.setAttribute("rows", "4");
+  textArea.setAttribute("columns", "25");
   input3.setAttribute("id", "date");
   choices.setAttribute("id", "choices");
   description.setAttribute("id", "description");
   date.setAttribute("id", "date");
   button.setAttribute("id", "buttonModal");
 
-  modalArea.append(form);
+  content.append(modal);
+  modal.append(modalContent);
+  modalContent.append(closebtn);
+  modalContent.append(form);
   form.append(choices);
   form.append(input1);
   form.append(lb1);
@@ -41,4 +51,15 @@ export function formCreater(id) {
   form.append(input3);
   form.append(lb3);
   form.append(button);
+
+  closebtn.textContent = "X";
+  description.textContent = "Description:";
+  date.textContent = "Date:";
+  button.textContent = "Add";
+
+  function closeModals(id) {
+    id.style.display = "none";
+  }
+
+  closebtn.addEventListener('click', closeModals)
 }
