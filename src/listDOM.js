@@ -91,7 +91,7 @@ export function storedListData() {
     ldatabox.append(ldataTitle);
     ldataTitle.textContent = 'Title: ' + ldata[i].title;
     ldatabox.append(ldataDesc);
-    ldataDesc.textContent = 'Note Description: ' + ldata[i].description;
+    ldataDesc.textContent = 'Description: ' + ldata[i].description;
     ldatabox.append(ldataDate);
     ldataDate.textContent = 'Date: ' + ldata[i].date;
     ldatabox.append(ldeleteBtn);

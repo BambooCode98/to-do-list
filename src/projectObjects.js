@@ -9,7 +9,6 @@ formCreater("project");
 
 const form = document.forms["project"];
 // const form = document.querySelector('#project');
-console.log(form);
 // const proPage = document.querySelector('.proPage');
 
 export let projectList = [];

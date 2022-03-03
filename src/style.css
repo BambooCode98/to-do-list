@@ -81,11 +81,16 @@ body{
       .pbox, .nbox, .lbox{
         border: 2px rgb(103, 130, 170) solid;
         border-radius: 5px;
-        background-color: rgb(76, 240, 232);
+        /* background-color: rgb(76, 240, 232); */
         padding: 4px;
-        height: 80%;
+        height: 90%;
         width: 80%;
         margin: 5px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        flex-direction: column;
       }
 
       .notePage{
@@ -102,6 +107,30 @@ body{
 
       .lbox{
         background-color: #d4d250e0;
+      }
+
+      .delete{
+        /* position: relative;
+        top: -85%;
+        left: 35%; */
+        border: 3px solid black;
+        border-radius: 5px;
+        width: 15%;
+        height: 35%;
+      }
+
+      .delete:hover{
+        background-color:rgb(141, 140, 140);
+      }
+
+      .title, .desc, .date{
+        width: 45%;
+        height: 35%;
+      }
+
+      .title{
+        border-bottom: solid 2px blue;
+        font-size: 20px;
       }
 
       /* everything below is for the modals */

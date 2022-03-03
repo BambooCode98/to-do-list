@@ -29,6 +29,7 @@ export function formCreater(id) {
   input1.setAttribute("id", "title");
   textArea.setAttribute("id", "descriptionBox");
   textArea.setAttribute("form", id);
+  textArea.setAttribute("placeholder", "Enter a description...");
   textArea.setAttribute("rows", "4");
   textArea.setAttribute("columns", "25");
   input3.setAttribute("id", "date");
