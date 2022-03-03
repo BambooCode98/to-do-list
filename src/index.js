@@ -21,13 +21,16 @@ const lmodal = document.querySelector('.list');
 const proBtn = document.querySelector('.proBtn');
 const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
-const closebtns = document.querySelector('.close-modal');
+const pclosebtn = document.querySelector('.projectx');
+const nclosebtn = document.querySelector('.notex');
+const lclosebtn = document.querySelector('.listx');
 const pform = document.forms["project"];
 const pchoice = pform.querySelector('#choices');
 const nform = document.forms["note"];
 const nchoice = nform.querySelector('#choices');
 const lform = document.forms["list"];
 const lchoice = lform.querySelector('#choices');
+
 //tab selection from dom
 
 const protab = document.querySelector('#protab');
@@ -77,9 +80,15 @@ btn3.addEventListener('click', function() {
   lchoice.textContent = "List Title:";
 })
 
-closebtns.addEventListener('click', function() {
+pclosebtn.addEventListener('click', function() {
   pmodal.style.display = "none";
+})
+  
+nclosebtn.addEventListener('click', function() {
   nmodal.style.display = "none";
+})
+
+lclosebtn.addEventListener('click', function() {
   lmodal.style.display = "none";
 })
 

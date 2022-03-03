@@ -69,7 +69,6 @@ btn2.textContent = "+New Note";
 
 export function storedNoteData() {
   let ndata = getNoteData();
-  console.log(ndata);
   for(let i = 0; i < ndata.length; i++) {
 
     const ndatabox = document.createElement('div');

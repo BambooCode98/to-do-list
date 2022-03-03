@@ -168,14 +168,14 @@ body{
         background-color: rgba(0, 0, 0, 0.1);
       }
 
-      .close-modal{
+      .projectx, .notex, .listx{
         position: relative;
         left: 250px;
         top: -200px;
         font-size: 50px;
       }
       
-      .close-modal:hover{
+      .projectx:hover, .notex:hover, .listx:hover{
         color: rgb(117, 111, 111);
         cursor: pointer;
       }

@@ -54,9 +54,3 @@ export function getNoteData() {
   return ndata;
 }
 
-
-
-
-
-
-

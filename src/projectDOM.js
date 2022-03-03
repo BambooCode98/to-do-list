@@ -69,7 +69,6 @@ newbtn.textContent = "+New Project";
 
 export function storedData() {
   let data = getData();
-  console.log(data);
   for(let i = 0; i < data.length; i++) {
 
     const databox = document.createElement('div');

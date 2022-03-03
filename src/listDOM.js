@@ -68,11 +68,8 @@ listPage.append(btn3);
 listHeader.innerHTML = "Lists";
 btn3.textContent = "+New List";
 
-
-
 export function storedListData() {
   let ldata = getListData();
-  console.log(ldata);
   for(let i = 0; i < ldata.length; i++) {
 
     const ldatabox = document.createElement('div');

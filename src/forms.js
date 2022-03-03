@@ -24,7 +24,7 @@ export function formCreater(id) {
 
   modal.classList.add(id);
   modalContent.classList.add('modal-content');
-  closebtn.classList.add('close-modal');
+  closebtn.classList.add(id + "x");
   form.setAttribute("id", id);
   input1.setAttribute("id", "title");
   textArea.setAttribute("id", "descriptionBox");
@@ -57,9 +57,4 @@ export function formCreater(id) {
   date.textContent = "Date:";
   button.textContent = "Add";
 
-  function closeModals(id) {
-    id.style.display = "none";
-  }
-
-  closebtn.addEventListener('click', closeModals)
 }
